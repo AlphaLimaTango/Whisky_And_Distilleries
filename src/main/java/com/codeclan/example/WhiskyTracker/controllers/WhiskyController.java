@@ -24,7 +24,7 @@ public class WhiskyController {
     }
 
     @GetMapping(value = "/distillery/{distillery}/age/{age}")
-    public List<Whisky> getWhiskyOfParticularDistilleryAndParticularAge(@PathVariable String distillery, Integer age){
+    public List<Whisky> getWhiskyOfParticularDistilleryAndParticularAge(@PathVariable String distillery, @PathVariable Integer age){
         return whiskyRepository.getWhiskyOfParticularDistilleryAndParticularAge(distillery, age);
     }
 
